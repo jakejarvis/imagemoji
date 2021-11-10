@@ -1,0 +1,55 @@
+{
+  "name": "imagemoji",
+  "version": "0.0.0",
+  "description": "🖼️ Replaces emojis in strings or DOM nodes with corresponding images",
+  "license": "MIT",
+  "author": {
+    "name": "Jake Jarvis",
+    "email": "jake@jarv.is",
+    "url": "https://jarv.is/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jakejarvis/imagemoji.git"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "source": "./src/imagemoji.ts",
+  "main": "./dist/imagemoji.cjs",
+  "module": "./dist/imagemoji.esm.js",
+  "unpkg": "./dist/imagemoji.min.js",
+  "exports": {
+    "require": "./dist/imagemoji.cjs",
+    "import": "./dist/imagemoji.esm.js",
+    "browser": "./dist/imagemoji.min.js"
+  },
+  "types": "./dist/imagemoji.d.ts",
+  "scripts": {
+    "build": "microbundle --format cjs,esm,umd",
+    "test": "eslint .",
+    "prepublishOnly": "yarn build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@jakejarvis/eslint-config": "*",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "eslint": "^8.2.0",
+    "microbundle": "^0.14.1",
+    "twemoji-parser": "13.1.0",
+    "typescript": "^4.4.4"
+  },
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
+  "keywords": [
+    "front-end",
+    "emoji",
+    "twemoji",
+    "html",
+    "dom",
+    "unicode"
+  ]
+}
