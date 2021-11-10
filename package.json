@@ -1,6 +1,6 @@
 {
   "name": "imagemoji",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "🖼️ Replaces emojis in strings or DOM nodes with corresponding images",
   "license": "MIT",
   "author": {
