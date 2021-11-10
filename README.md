@@ -8,7 +8,7 @@ Replaces emojis in strings or DOM nodes with corresponding images of your choosi
 
 ## Usage
 
-### via [unpkg](https://unpkg.com/browse/imagemoji/):
+### via [unpkg](https://unpkg.com/browse/imagemoji/)
 
 ```html
 <html>
@@ -27,17 +27,15 @@ Replaces emojis in strings or DOM nodes with corresponding images of your choosi
 </html>
 ```
 
-### via NPM:
+### via NPM
 
 `npm install imagemoji` or `yarn add imagemoji`
 
 ```js
-import imagemoji from "imagemoji";
-// or:
-// const imagemoji = require("imagemoji");
+import { parse as parseEmoji } from "imagemoji";
 
-imagemoji.parse(document.body);
-imagemoji.parse(document.body, (icon) => `/assets/emoji/${icon}.png`);
+parseEmoji(document.body);
+parseEmoji(document.body, (icon) => `/assets/emoji/${icon}.png`);
 ```
 
 ## API
