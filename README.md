@@ -1,8 +1,7 @@
 # 🖼️ imagemoji
 
 [![CI](https://github.com/jakejarvis/imagemoji/actions/workflows/ci.yml/badge.svg)](https://github.com/jakejarvis/imagemoji/actions/workflows/ci.yml)
-[![npm](https://img.shields.io/npm/v/imagemoji?logo=npm)](https://www.npmjs.com/package/imagemoji)
-[![MIT License](https://img.shields.io/github/license/jakejarvis/imagemoji)](LICENSE)
+[![npm](https://img.shields.io/npm/v/imagemoji)](https://www.npmjs.com/package/imagemoji)
 
 Replaces emojis in strings or DOM nodes with corresponding images of your choosing. A barebones, mostly drop-in replacement for Twemoji's [`twemoji.parse()`](https://github.com/twitter/twemoji#twemojiparse---v1) (and heavily cherry-picked from Twitter's [original script](https://github.com/twitter/twemoji/blob/master/scripts/build.js) to cut some cruft and save a few bytes).
 
