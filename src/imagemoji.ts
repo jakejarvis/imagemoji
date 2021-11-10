@@ -101,27 +101,28 @@ const getAllTextNodes = function (node: Node, allText: Node[] = []): Node[] {
  * @return  same generic node with emoji in place, if any.
  */
 const parseNode = function (node: Node, srcGenerator: (icon: string) => string): Node {
-  const allText = getAllTextNodes(node);
+  const allText = getAllTextNodes(node, []);
   let { length } = allText;
 
   while (length--) {
+    let modified = false;
     const fragment = document.createDocumentFragment();
     const subnode = allText[length];
     const text = subnode.nodeValue || "";
     let match: RegExpExecArray | null;
-    let modified = false;
     let i = 0;
 
     while ((match = regex.exec(text))) {
       const { index } = match;
-      const rawEmoji = match[0]; // eslint-disable-line prefer-destructuring
-      const icon = toCodePoint(rawEmoji);
-      const src = srcGenerator(icon);
-      i = index + rawEmoji.length;
 
       if (index !== i) {
         fragment.appendChild(createText(text.slice(i, index), true));
       }
+
+      const rawEmoji = match[0]; // eslint-disable-line prefer-destructuring
+      const icon = toCodePoint(rawEmoji);
+      const src = srcGenerator(icon);
+      i = index + rawEmoji.length;
 
       if (icon && src) {
         const img = new Image();
